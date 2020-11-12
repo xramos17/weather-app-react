@@ -3,7 +3,7 @@ import axios from 'axios';
 import "./Weather.css";
 
 
-export default function Weather (props){
+export default function Weather (){
 
 const [city, setCity] = useState("Lisbon");
 const [loaded, setLoaded] = useState(false);
@@ -22,10 +22,7 @@ function showInfo (response){
       minTemperature : response.data.main.temp_min,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
-
 }
-
-
 
 function handleSubmit(event){
     event.preventDefault();   
@@ -33,6 +30,7 @@ function handleSubmit(event){
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
      axios.get(url).then(showInfo);
+
      }
 
 function updateCity(event){
