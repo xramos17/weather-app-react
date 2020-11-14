@@ -8,7 +8,7 @@ export default function Weather (){
 const [city, setCity] = useState("Lisbon");
 const [loaded, setLoaded] = useState(false);
 const [weather, setWeather] = useState({});
-
+const [temperature, setTemperature] = useState(weather.temperature)
 
 function showInfo (response){
  setLoaded(true);
@@ -28,7 +28,7 @@ function handleSubmit(event){
     event.preventDefault();   
     let apiKey = "aa9bf928550b2eb28bf9a5399ca95f34";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
+     
      axios.get(url).then(showInfo);
 
      }
@@ -38,6 +38,17 @@ function updateCity(event){
  setCity(event.target.value);
  
    }
+     function showFarehrenheit(event) {
+    event.preventDefault();
+    setTemperature(Math.round((weather.temperature * 9) / 5 + 32));
+  }
+
+function showCelsius(event) {
+    event.preventDefault();
+   temperature();
+  }
+
+
    
    let form = (  
    <form onSubmit={handleSubmit} >
@@ -93,7 +104,7 @@ let Description= (
                   {Math.round(weather.temperature)}
                 </strong>
                 <span className="measures-cf">
-                  <a href="/" >Cº</a> | <a href="/">Fº</a>
+                  <a href="/" onClick={showCelsius}>Cº</a> | <a href="/" onClick={showFarehrenheit}>Fº</a>
                 </span>
               </div>
             </div>
