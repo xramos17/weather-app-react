@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 
 export default function FormattedDate(props){
@@ -28,9 +28,9 @@ export default function FormattedDate(props){
      minutes =`0${minutes}`
  }
 if (hours < 10){
-     minutes =`0${hours}`
+     hours =`0${hours}`
  }
- 
+
     return(
  <ul>
             <li>
@@ -44,5 +44,5 @@ if (hours < 10){
           </ul>
 
 
-    )
+    );
 }
