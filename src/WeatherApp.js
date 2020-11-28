@@ -79,11 +79,11 @@ return (
             <div className="col-3">
               <input type="submit" value="search" className="search-button" />
               <div className="col-2 geo-button image" title="Current Location">
-                <input
+                <button
                   type="submit"
-                  value="📍"
+                  
                   className="button-current-geo" 
-                />
+                >📍</button>
               </div>
             </div>
           </div>
