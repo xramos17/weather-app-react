@@ -55,7 +55,22 @@ function updateCity(event){
  setCity(event.target.value);
  
    }
+//GEOCITY
 
+function searchLocation(position){
+
+let apiKey ="ef9747430c2bc6962b4ea461b700c468"
+ let latitude = position.coords.latitude;
+let longitude = position.coords.longitude;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+axios.get(apiUrl).then(showInfo);
+}
+
+function currentCity(event){
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+
+}
 
 
 if(weather.loaded){
@@ -81,8 +96,7 @@ return (
               <div className="col-2 geo-button image" title="Current Location">
                 <button
                   type="submit"
-                  
-                  className="button-current-geo" 
+                  className="button-current-geo" onClick={currentCity}
                 >📍</button>
               </div>
             </div>
