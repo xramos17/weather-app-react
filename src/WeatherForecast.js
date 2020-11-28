@@ -23,7 +23,7 @@ if(loaded && props.city === forecast.city.name){
         
 
             {forecast.list.slice(0, 5).map(function(forecastIteam){
-                return  <WeatherForecastPreview data ={forecastIteam}/>
+                return  <WeatherForecastPreview data ={forecastIteam} unit={props.unit}/>
             })}
 
             

@@ -20,7 +20,7 @@ export default function WeatherTemperature(props){
 
     }
 
-    if(unit === "celsius"){
+    if( unit === "celsius"){
     return (
        
         <span>
