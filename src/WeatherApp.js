@@ -106,7 +106,7 @@ return (
      
 <WeatherInfo data={weather} unit={unit} setUnit={setUnit} />
 
-<WeatherForecast city={weather.city} unit={unit}/>       
+<WeatherForecast city={weather.city} unit={unit} setUnit={setUnit} />       
         
       </div>
      

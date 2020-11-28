@@ -5,7 +5,7 @@ import "./Weather.css"
 
 export default function WeatherForecast(props){
  
-const[loaded, setLoaded] = useState(false);
+const [loaded, setLoaded] = useState(false);
 const [forecast, setForecast]= useState(null);
 
 
@@ -23,12 +23,8 @@ if(loaded && props.city === forecast.city.name){
         
 
             {forecast.list.slice(0, 5).map(function(forecastIteam){
-                return  <WeatherForecastPreview data ={forecastIteam} unit={props.unit}/>
+                return  <WeatherForecastPreview data ={forecastIteam} unit={props.unit}  />
             })}
-
-            
-
-
 
               </div> 
 
