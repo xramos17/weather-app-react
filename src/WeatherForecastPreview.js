@@ -3,25 +3,29 @@ import React from "react";
 
 
 export default function WeatherForecastPreview(props){
+    let maxTemp = Math.round(props.data.main.temp_max)
+    let minTemp = Math.round(props.data.main.temp_min)
 
     function hoursTime(){
        let date = new Date(props.data.dt * 1000)
        let hours = date.getHours()
         return `${hours}:00`
     }
+
+    
     return (
 
-<span>
-<h5>{hoursTime()}:00</h5>
+<div className ="col-2 m-2">
+<h5>{hoursTime()}</h5>
 
       <img src= {`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`} alt ={props.data.weather[0].description} />
 
 
           <div className ="weather-forecast-temperature">
-    <strong><span className="forecast-convert"> {Math.round(props.data.main.temp_max)}</span>º</strong><span className="forecast-convert">{Math.round(props.data.main.temp_min)}</span>º
+    <strong><span className="forecast-convert"> {maxTemp}</span>º</strong><span className="forecast-convert">{minTemp}</span>º
            </div>
 
-</span>
+</div>
 
     )
 }

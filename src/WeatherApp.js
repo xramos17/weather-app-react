@@ -90,8 +90,9 @@ return (
         </form>
      
 <WeatherInfo data={weather}/>
+
 <WeatherForecast city={weather.city}/>       
-         
+        
       </div>
      
       )
