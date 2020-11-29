@@ -51,7 +51,7 @@
   margin-top: 5px;
 }
 .current-weather img {
-  margin-right: 10px;
+  margin-right: 20px;
   margin-top: 0;
   height: 75px;
   width: 75px;
@@ -122,34 +122,33 @@
   font-size: 16px;
   font-weight: 500;
 }
-.weather-max-min li {
-  color: black;
-  font-size: 12px;
-  padding: 0px;
-}
-.weather-minmax-temperature li {
+
+.weather-sunset-sunrise li {
+  padding: 0;
+  display: inline;
   margin-top: 30px;
-  margin: 5px 0 10px 0;
-  color: lightgrey;
+  margin: 5px 10px 10px 0;
+  color: #ed927b;
   height: auto;
   line-height: 15px;
   font-size: 16px;
 }
-.weather-minmax-temperature strong {
+.weather-sunset-sunrise strong {
   font-size: 17px;
-  font-weight: 500;
+  font-weight: 300;
+  color: lightgray;
 }
 
-.weather-minmax-temperature span {
-  font-size: 15px;
-  font-weight: 5400;
+.weather-sunset-sunrise span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6f6f70;
 }
 li {
   list-style: none;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 200;
-  margin: 0;
-  padding: 0;
+
   line-height: 25px;
 }
 li::first-letter {

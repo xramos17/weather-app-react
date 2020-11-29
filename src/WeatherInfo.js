@@ -1,6 +1,7 @@
 import React from "react";
-import FormattedDate from "./FormattedDate";
+import FormattedDate from "./FormattedDate"
 import WeatherTemperature from "./WeatherTemperature"
+import WeatherSYS from "./WeatherSYS";
 
 
 export default function WeatherInfo(props){
@@ -27,17 +28,13 @@ export default function WeatherInfo(props){
                   
 <WeatherTemperature celsius={props.data.temperature} unit={props.unit} setUnit={props.setUnit} />
 
-              
             </div>
  
-<div className="weather-minmax-temperature ml-3 mt-3">
-              <ul>
-                <li>
-                  Today <strong>{Math.round(props.data.highTemperature)}º</strong>
-                  <span>{Math.round(props.data.minTemperature)}º</span>
-                </li>
-              </ul>
-            </div>
+
+
+             <WeatherSYS sunrise={props.data.sunrise} sunset ={props.data.sunset}  />
+              
+           
 
           </div>
 

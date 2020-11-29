@@ -30,6 +30,8 @@ function showInfo (response){
       description: response.data.weather[0].description,
       highTemperature: response.data.main.temp_max,
       minTemperature : response.data.main.temp_min,
+      sunrise: new Date(response.data.sys.sunrise * 1000 ),
+      sunset: new Date(response.data.sys.sunset * 1000),
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     });
 
