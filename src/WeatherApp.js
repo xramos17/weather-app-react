@@ -78,7 +78,6 @@ function currentCity(event){
 
 if(weather.loaded){
 
-//WORKING SEARCH ENGINE SETUP
 
 return (   
 

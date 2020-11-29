@@ -11,9 +11,9 @@ function sunrise(){
 }
 
 function sunset(){
- let hour = props.sunset.getHours();
- let minute = props.sunset.getMinutes();
-return `${hour}:${minute}`
+ let hours = props.sunset.getHours();
+ let minutes = props.sunset.getMinutes();
+return `${hours}:${minutes}`
 }
 
 

@@ -6,7 +6,6 @@ import WeatherSYS from "./WeatherSYS";
 
 export default function WeatherInfo(props){
 
-
     return(
 
 <div>
@@ -16,27 +15,20 @@ export default function WeatherInfo(props){
           <span className="w-country">
             (<span>{props.data.country}</span>)    
           </span>
-         
          <FormattedDate date={props.data.date} />
-
         </div>
-
 <div className="row">
           <div className="col-6">
             <div className="clearfix current-weather">
                 <img className="float-left" src={props.data.icon} alt={props.data.description} />
                   
-<WeatherTemperature celsius={props.data.temperature} unit={props.unit} setUnit={props.setUnit} />
+           <WeatherTemperature celsius={props.data.temperature} unit={props.unit} setUnit={props.setUnit} />
 
             </div>
- 
 
-
-             <WeatherSYS sunrise={props.data.sunrise} sunset ={props.data.sunset}  />
+           <WeatherSYS sunrise={props.data.sunrise} sunset ={props.data.sunset}  />
               
-           
-
-          </div>
+            </div>   
 
           <div className="col-6 weather-info">
             <ul>
